@@ -6,6 +6,9 @@
     --color-button-active--: #404BBF;
     --color-logo-white--: #F4F4FD;
     --color-footer-text--: #E7E9FC;
+    --color-customers-icon--:#8E8F99;
+    --color-footer-icon-bg--: rgba(255, 255, 255, 0.1);
+    --color-footer-icon-bg-active--: #31D0AA;
 }
 
 h1, 
@@ -102,7 +105,6 @@ body {
 }
 .logo-white {
     display: inline-block;
-    margin-bottom: 16px;
 
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
@@ -150,8 +152,16 @@ body {
 }
 /* MAIN */
 /* HERO */
-.hero {
-    padding: 188px 0px;
+.hero-section {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-top: 188px;
+    padding-bottom: 188px;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+    url(../images/img-hero-people-office.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     background-color: var(--color-secondary--);
 }
 .hero-container {
@@ -185,11 +195,22 @@ body {
 .features-section {
     padding-bottom: 0;
 }
+.features-item {
+    flex-basis: 264px;
+}
+.features-thumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 112px;
+    margin-bottom: 8px;
+
+    background-color: var(--color-logo-white--);
+    border-radius: 4px;
+}
 .features-list {
     display: flex;
-}
-.features-list .item:not(:last-child) {
-    margin-right: 24px;
+    gap: 24px;
 }
 .features-subtitle {
     margin-bottom: 8px;
@@ -257,18 +278,118 @@ body {
     line-height: 1.2;
     color: var(--color-secondary--);
 }
+.team-text {
+    padding-bottom: 8px;
+}
+.team-social-list{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+.team-social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    background-color: var(--color-logo-blue--);
+}
+.team-social-icon {
+    fill: var(--color-logo-white--);
+}
+.team-social-link:hover,
+.team-social-link:focus {
+    background-color: var(--color-button-active--);
+}
+/* CUSTOMERS */
+.customers-section {
+    padding-top: 130px;
+}
+.customers-title {
+    padding-bottom: 72px;
+    text-align: center;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-transform: capitalize;
+    color: var(--color-secondary--);
+}
+.customers-list {
+    display: flex;
+    gap: 24px;
+}
+.customers-link {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 168px;
+    height: 88px;
+
+    border: 1px solid var(--color-customers-icon--);
+    border-radius: 4px;
+}
+.customers-icon {
+    fill: var(--color-customers-icon--);
+}
+.customers-link:hover,
+.customers-link:focus {
+    border-color: var(--color-button-active--);
+}
+.customers-link:hover .customers-icon,
+.customers-link:focus .customers-icon {
+    fill: var(--color-button-active--);
+}
 /* FOOTER */
 .footer {
     background-color: var(--color-secondary--);
 }
-.footer .container {
+.footer-container {
+    display: flex;
     padding-top: 100px;
     padding-bottom: 100px;
+}
+.footer-content {
+    margin-right: 120px;
+}
+.footer-logo {
+    margin-bottom: 16px;
 }
 .footer-text {
     width: 264px;
     color: var(--color-footer-text--);
 }
+.footer-social-subtitle {
+    margin-bottom: 16px;
+
+    font-weight: 500;
+    color: var(--color-background--);
+}
+.footer-social-list {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+.footer-social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    background-color: var(--color-footer-icon-bg--);
+}
+.footer-social-icon {
+    fill: var(--color-logo-white--);
+}
+.footer-social-link:hover,
+.footer-social-link:focus {
+    background-color: var(--color-footer-icon-bg-active--);
+}
+
 /* PORTFOLIO */
 .portfolio-section {
     padding-top: 96px;
@@ -315,6 +436,10 @@ body {
 
     margin-top: 48px;
     margin-left: 24px;
+}
+.portfolio-item:hover {
+    border: 0.5px soid var(--color-logo-white--);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .portfolio-cards {
     padding-top: 32px;
